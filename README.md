@@ -1,6 +1,10 @@
 ## create-new-repo ##
 This is a simple python script that creates a new repository.
 
+## Run with ##
+python ./newrepo.py
+python3 ./newrepo.py
+
 ## Input ##
 User: << github username
 Repository: << name of repository being created
