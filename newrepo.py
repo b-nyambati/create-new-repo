@@ -18,7 +18,7 @@ set_up_repo += "git remote add origin git@github.com:{}/{}.git&&".format(user_na
 set_up_repo += "git push -u origin master" # Pushing everything into master
 
 # Excecuting (create_repo_string) & (set_up_repo) commands below
-os.system(create_repo_string + " > x") # create_repo_string's output is displayed into a file named x
+os.system(create_repo_string + " > {}/x".format(repo_name)) # create_repo_string's output is displayed into a file named x
 os.system("rm ./x") # The file named x is useless imo so get i'm getting rid of it
 os.system(set_up_repo) 
 
