@@ -8,7 +8,9 @@ repo_name = input("Repository: ") # github repository
 create_repo_string = """curl -u '{}' https://api.github.com/user/repos -d '{{"name":"{}"}}'""".format(user_name, repo_name)
 
 # set_up_repo is one long string with a bunch of commands tied with && to sync local machine to github
-set_up_repo = """echo "## {} ##" > README.md&&""".format(repo_name) # Create README
+set_up_repo = "mkdir {}&&".format(repo_name)
+set_up_repo += "cd {}&&".format(repo_name)
+set_up_repo += """echo "## {} ##" > README.md&&""".format(repo_name) # Create README
 set_up_repo += "git init&&" # Initialize git
 set_up_repo += "git add .&&" # Add all files in current directory
 set_up_repo += """git commit -m "first commit"&&""" # Make an initial commit
