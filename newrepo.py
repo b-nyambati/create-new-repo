@@ -19,7 +19,7 @@ set_up_repo += "git push -u origin master" # Pushing everything into master
 
 # Excecuting (create_repo_string) & (set_up_repo) commands below
 os.system(create_repo_string + " > {}/x".format(repo_name)) # create_repo_string's output is displayed into a file named x
-os.system("rm ./x") # The file named x is useless imo so get i'm getting rid of it
+os.system("rm ./{}/x".format(repo_name)) # The file named x is useless imo so get i'm getting rid of it
 os.system(set_up_repo) 
 
 print("\n\nCreated: " + repo_name + " @ " + user_name + "\n\n")
